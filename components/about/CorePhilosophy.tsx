@@ -1,7 +1,90 @@
 import { AlertCircle, Camera, CheckCircle, Repeat, Wrench } from "lucide-react";
 import Image from "next/image";
 
+function CircularProgressGauge({
+    percentage,
+    color,
+    trackColor = "#E2E8F0",
+    size = 64,
+    strokeWidth = 5,
+}: {
+    percentage: number;
+    color: string;
+    trackColor?: string;
+    size?: number;
+    strokeWidth?: number;
+}) {
+    const center = size / 2;
+    const radius = (size - strokeWidth) / 2;
+    const circumference = 2 * Math.PI * radius;
+    const strokeDashoffset = circumference - (circumference * percentage) / 100;
+
+    return (
+        <div
+            className="relative flex items-center justify-center shrink-0"
+            style={{ width: size, height: size }}
+        >
+            <svg
+                width={size}
+                height={size}
+                viewBox={`0 0 ${size} ${size}`}
+                className="-rotate-90 transform"
+            >
+                {/* Background Track Circle */}
+                <circle
+                    cx={center}
+                    cy={center}
+                    r={radius}
+                    fill="none"
+                    stroke={trackColor}
+                    strokeWidth={strokeWidth}
+                />
+                {/* Dynamic Value Arc */}
+                <circle
+                    cx={center}
+                    cy={center}
+                    r={radius}
+                    fill="none"
+                    stroke={color}
+                    strokeWidth={strokeWidth}
+                    strokeDasharray={circumference}
+                    strokeDashoffset={strokeDashoffset}
+                    strokeLinecap="round"
+                    className="transition-all duration-700 ease-out"
+                />
+            </svg>
+            <span className="absolute font-black text-slate-900 text-base sm:text-lg tracking-tight">
+                {percentage}%
+            </span>
+        </div>
+    );
+}
+
 export default function CorePhilosophy() {
+    const ratioMetrics = [
+        {
+            percentage: 65,
+            color: "#FD651E", // primary brand orange
+            title: "Hands-on Practical Labs",
+            description:
+                "Active execution in specialized workshops & kitchens.",
+        },
+        {
+            percentage: 25,
+            color: "#0B1C30", // dark navy
+            title: "Applied Technical Management",
+            description:
+                "Code compliance, safety protocols, and cost estimating.",
+        },
+        {
+            percentage: 10,
+            color: "#009668", // success green
+            title: "Theory & Fundamentals",
+            description:
+                "Core scientific principles and schematic interpretation.",
+        },
+    ];
+
     return (
         <section className="py-16 lg:py-24 bg-white">
             <div className="container mx-auto px-4">
@@ -109,49 +192,27 @@ export default function CorePhilosophy() {
                             </div>
                         </div>
 
-                        {/* 3 Metric Cards */}
+                        {/* 3 Dynamic Metric Cards */}
                         <div className="grid grid-cols-3 gap-3 sm:gap-4">
-                            {/* Metric 1 */}
-                            <div className="bg-[#F8FAFD] border border-slate-200/80 rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center shadow-2xs hover:shadow-xs transition-shadow">
-                                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-[3.5px] border-primary flex items-center justify-center font-black text-slate-900 text-base sm:text-xl bg-white shadow-xs">
-                                    65%
+                            {ratioMetrics.map((item) => (
+                                <div
+                                    key={item.title}
+                                    className="bg-[#F8FAFD] border border-slate-200/80 rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center shadow-2xs hover:shadow-xs transition-shadow"
+                                >
+                                    <CircularProgressGauge
+                                        percentage={item.percentage}
+                                        color={item.color}
+                                        size={64}
+                                        strokeWidth={5}
+                                    />
+                                    <h4 className="font-bold text-slate-900 text-xs sm:text-sm mt-3.5 leading-snug">
+                                        {item.title}
+                                    </h4>
+                                    <p className="text-[11px] sm:text-xs text-slate-500 mt-1.5 leading-relaxed">
+                                        {item.description}
+                                    </p>
                                 </div>
-                                <h4 className="font-bold text-slate-900 text-xs sm:text-sm mt-3.5 leading-snug">
-                                    Hands-on Practical Labs
-                                </h4>
-                                <p className="text-[11px] sm:text-xs text-slate-500 mt-1.5 leading-relaxed">
-                                    Active execution in specialized workshops &
-                                    kitchens.
-                                </p>
-                            </div>
-
-                            {/* Metric 2 */}
-                            <div className="bg-[#F8FAFD] border border-slate-200/80 rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center shadow-2xs hover:shadow-xs transition-shadow">
-                                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-[3.5px] border-[#0B1C30] flex items-center justify-center font-black text-slate-900 text-base sm:text-xl bg-white shadow-xs">
-                                    25%
-                                </div>
-                                <h4 className="font-bold text-slate-900 text-xs sm:text-sm mt-3.5 leading-snug">
-                                    Applied Technical Management
-                                </h4>
-                                <p className="text-[11px] sm:text-xs text-slate-500 mt-1.5 leading-relaxed">
-                                    Code compliance, safety protocols, and cost
-                                    estimating.
-                                </p>
-                            </div>
-
-                            {/* Metric 3 */}
-                            <div className="bg-[#F8FAFD] border border-slate-200/80 rounded-2xl p-4 sm:p-5 flex flex-col items-center text-center shadow-2xs hover:shadow-xs transition-shadow">
-                                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-[3.5px] border-success flex items-center justify-center font-black text-slate-900 text-base sm:text-xl bg-white shadow-xs">
-                                    10%
-                                </div>
-                                <h4 className="font-bold text-slate-900 text-xs sm:text-sm mt-3.5 leading-snug">
-                                    Theory & Fundamentals
-                                </h4>
-                                <p className="text-[11px] sm:text-xs text-slate-500 mt-1.5 leading-relaxed">
-                                    Core scientific principles and schematic
-                                    interpretation.
-                                </p>
-                            </div>
+                            ))}
                         </div>
 
                         {/* Practical Lab Image with Badge */}
@@ -164,7 +225,7 @@ export default function CorePhilosophy() {
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                             {/* Overlay Gradient */}
-                            <div className="absolute inset-0 bg-linear-to-t from-slate-950/80 via-transparent to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
 
                             {/* Overlay Caption Pill */}
                             <div className="absolute bottom-3 left-3 right-3 sm:right-auto bg-slate-900/90 backdrop-blur-md text-white border border-white/15 px-3.5 py-2 rounded-xl text-xs flex items-center gap-2 shadow-lg">
