@@ -1,6 +1,6 @@
 import { ArrowRight, BookOpen } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 interface ProgramCardProps {
     title: string;
@@ -27,7 +27,7 @@ export default function ProgramCard({
     return (
         <div className="group bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
             {/* Image Placeholder */}
-            <div className="relative aspect-[16/10] bg-blue-light overflow-hidden">
+            <div className="relative aspect-16/10 bg-blue-light overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center text-muted text-sm">
                     {category} Image
                 </div>

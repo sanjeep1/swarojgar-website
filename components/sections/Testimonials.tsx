@@ -1,5 +1,5 @@
+import { Quote, Star } from "lucide-react";
 import { testimonials } from "@/lib/testimonials";
-import { Star, Quote } from "lucide-react";
 
 export default function Testimonials() {
     return (

@@ -1,5 +1,5 @@
-import { labs } from "@/lib/labs";
 import { ShieldCheck } from "lucide-react";
+import { labs } from "@/lib/labs";
 
 export default function TrainingLabs() {
     return (
@@ -33,7 +33,7 @@ export default function TrainingLabs() {
                             className="group bg-white rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-lg transition-all duration-300"
                         >
                             {/* Image Placeholder */}
-                            <div className="aspect-[4/3] bg-blue-light relative overflow-hidden">
+                            <div className="aspect-4/3 bg-blue-light relative overflow-hidden">
                                 <div className="absolute inset-0 flex items-center justify-center text-muted text-sm">
                                     {lab.title} Image
                                 </div>

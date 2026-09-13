@@ -1,7 +1,6 @@
-import { Star, Download, ArrowRight, CheckCircle2 } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, CheckCircle2, Download, Star } from "lucide-react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Hero() {
     return (

@@ -1,8 +1,9 @@
 "use client";
 
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { admissionSchema, type AdmissionFormValues } from "@/lib/validations";
+import { CheckCircle2, ShieldCheck } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -13,9 +14,8 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
 import { courses } from "@/lib/courses";
-import { CheckCircle2, ShieldCheck } from "lucide-react";
+import { type AdmissionFormValues, admissionSchema } from "@/lib/validations";
 
 const faqs = [
     {
@@ -71,7 +71,7 @@ export default function Enrollment() {
                         </p>
 
                         <div className="space-y-5">
-                            {faqs.map((faq, index) => (
+                            {faqs.map((faq) => (
                                 <div
                                     key={faq.question}
                                     className="bg-white rounded-xl p-5 border border-border"

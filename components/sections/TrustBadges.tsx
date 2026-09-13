@@ -33,7 +33,7 @@ export default function TrustBadges() {
         <section className="bg-navy text-white py-8">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-4">
-                    {badges.map((badge, index) => {
+                    {badges.map((badge) => {
                         const Icon = badge.icon;
                         return (
                             <div

@@ -7,36 +7,36 @@
     --font-inter: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
     /* Brand Orange */
-    --color-primary: #FD651E;
-    --color-primary-dark: #A73A00;
-    --color-peach: #FFB599;
-    --color-peach-light: #FFDBCE;
+    --color-primary: #fd651e;
+    --color-primary-dark: #a73a00;
+    --color-peach: #ffb599;
+    --color-peach-light: #ffdbce;
 
     /* Text colors */
-    --color-foreground: #0B1C30;
-    --color-border: #E5E7EB;
-    --color-body: #44474D;
-    --color-muted: #76849F;
-    --color-placeholder: #9CA3AF;
-    --color-disabled: #C5C6CD;
+    --color-foreground: #0b1c30;
+    --color-border: #e5e7eb;
+    --color-body: #44474d;
+    --color-muted: #76849f;
+    --color-placeholder: #9ca3af;
+    --color-disabled: #c5c6cd;
 
     /* Backgrounds */
-    --color-background: #FFFFFF;
-    --color-off-white: #F8F9FF;
-    --color-blue-light: #EFF4FF;
-    --color-blue-medium: #E5EEFF;
-    --color-blue-strong: #DCE9FF;
-    --color-blue-deep: #D3E4FE;
+    --color-background: #ffffff;
+    --color-off-white: #f8f9ff;
+    --color-blue-light: #eff4ff;
+    --color-blue-medium: #e5eeff;
+    --color-blue-strong: #dce9ff;
+    --color-blue-deep: #d3e4fe;
 
     /* Dark surfaces */
-    --color-dark-navy: #0D1C32;
-    --color-navy: #0B1C30;
+    --color-dark-navy: #0d1c32;
+    --color-navy: #0b1c30;
     --color-dark-green: #002113;
 
     /* Success */
     --color-success: #009668;
-    --color-success-light: #4EDEA3;
-    --color-success-lighter: #6FFBBE;
+    --color-success-light: #4edea3;
+    --color-success-lighter: #6ffbbe;
 
     /* Radius */
     --radius-lg: 0.625rem;

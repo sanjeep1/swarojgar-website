@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { CONTACT } from "@/lib/constants";
 
 export default function Campus() {
@@ -70,7 +70,7 @@ export default function Campus() {
                     </div>
 
                     {/* Right - Map Placeholder */}
-                    <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-dark-navy aspect-[4/3] lg:aspect-auto lg:h-[420px] relative">
+                    <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-dark-navy aspect-4/3 lg:aspect-auto lg:h-105 relative">
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
                             <MapPin size={40} className="text-primary mb-4" />
                             <p className="font-semibold text-lg mb-1">
