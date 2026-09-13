@@ -1,10 +1,10 @@
-import Campus from "@/components/sections/Campus";
-import Enrollment from "@/components/sections/Enrollment";
-import Hero from "@/components/sections/Hero";
-import Programs from "@/components/sections/Programs";
-import Testimonials from "@/components/sections/Testimonials";
-import TrainingLabs from "@/components/sections/TrainingLabs";
-import TrustBadges from "@/components/sections/TrustBadges";
+import Campus from "@/components/home/Campus";
+import Enrollment from "@/components/home/Enrollment";
+import Hero from "@/components/home/Hero";
+import Programs from "@/components/home/Programs";
+import Testimonials from "@/components/home/Testimonials";
+import TrainingLabs from "@/components/home/TrainingLabs";
+import TrustBadges from "@/components/home/TrustBadges";
 
 export default function Home() {
     return (
