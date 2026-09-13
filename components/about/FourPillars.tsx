@@ -1,4 +1,4 @@
-import { ArrowRight, Award, Cpu, GraduationCap, Wrench } from "lucide-react";
+import { Award, Cpu, GraduationCap, Wrench } from "lucide-react";
 
 export default function FourPillars() {
     const pillars = [

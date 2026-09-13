@@ -225,7 +225,7 @@ export default function CorePhilosophy() {
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                             {/* Overlay Gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                            <div className="absolute inset-0 bg-linear-to-t from-slate-950/80 via-transparent to-transparent" />
 
                             {/* Overlay Caption Pill */}
                             <div className="absolute bottom-3 left-3 right-3 sm:right-auto bg-slate-900/90 backdrop-blur-md text-white border border-white/15 px-3.5 py-2 rounded-xl text-xs flex items-center gap-2 shadow-lg">
