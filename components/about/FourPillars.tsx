@@ -8,8 +8,6 @@ export default function FourPillars() {
             title: "100% Hands-On Machines",
             description:
                 "Students train on exact industrial appliances they will operate in actual jobs—not scaled-down student toys or simulated computer models.",
-            standard: "Standard 1: Real Tools",
-            standardColor: "text-[#FD651E]",
         },
         {
             icon: GraduationCap,
@@ -17,8 +15,6 @@ export default function FourPillars() {
             title: "Master Industry Instructors",
             description:
                 "Courses are taught exclusively by practitioners with at least 8+ years of active field or kitchen experience, not career academic lecturers.",
-            standard: "Standard 2: Expert Faculty",
-            standardColor: "text-slate-300 group-hover:text-white",
         },
         {
             icon: Cpu,
@@ -26,8 +22,6 @@ export default function FourPillars() {
             title: "Commercial-Grade Machinery",
             description:
                 "From 3-group espresso machines to commercial convection ovens and 3-phase industrial panels—our workshop equipment matches industry standard.",
-            standard: "Standard 3: Pro Hardware",
-            standardColor: "text-[#FD651E]",
         },
         {
             icon: Award,
@@ -35,8 +29,6 @@ export default function FourPillars() {
             title: "CTEVT Standardized Curriculum",
             description:
                 "Every curriculum is rigorously aligned with CTEVT national occupational skill standards, preparing students for official national licensing and migration skill tests.",
-            standard: "Standard 4: National Merit",
-            standardColor: "text-slate-300 group-hover:text-white",
         },
     ];
 
@@ -88,19 +80,6 @@ export default function FourPillars() {
                                     <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
                                         {pillar.description}
                                     </p>
-                                </div>
-
-                                {/* Bottom Tag */}
-                                <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                                    <span
-                                        className={`text-xs font-semibold flex items-center gap-1.5 transition-colors ${pillar.standardColor}`}
-                                    >
-                                        {pillar.standard}
-                                        <ArrowRight
-                                            size={14}
-                                            className="group-hover:translate-x-1 transition-transform"
-                                        />
-                                    </span>
                                 </div>
                             </div>
                         );
