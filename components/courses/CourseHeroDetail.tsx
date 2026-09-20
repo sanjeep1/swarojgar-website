@@ -74,7 +74,10 @@ export default function CourseHeroDetail({ course }: CourseHeroDetailProps) {
                         {/* Quick Specs Grid */}
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                             <div className="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-2.5">
-                                <Clock size={18} className="text-primary shrink-0" />
+                                <Clock
+                                    size={18}
+                                    className="text-primary shrink-0"
+                                />
                                 <div>
                                     <span className="text-[10px] text-slate-400 uppercase font-semibold block">
                                         Duration
@@ -86,7 +89,10 @@ export default function CourseHeroDetail({ course }: CourseHeroDetailProps) {
                             </div>
 
                             <div className="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-2.5">
-                                <Flame size={18} className="text-orange-400 shrink-0" />
+                                <Flame
+                                    size={18}
+                                    className="text-orange-400 shrink-0"
+                                />
                                 <div>
                                     <span className="text-[10px] text-slate-400 uppercase font-semibold block">
                                         Training Ratio
@@ -98,7 +104,10 @@ export default function CourseHeroDetail({ course }: CourseHeroDetailProps) {
                             </div>
 
                             <div className="bg-white/5 border border-white/10 rounded-xl p-3 flex items-center gap-2.5">
-                                <Users size={18} className="text-emerald-400 shrink-0" />
+                                <Users
+                                    size={18}
+                                    className="text-emerald-400 shrink-0"
+                                />
                                 <div>
                                     <span className="text-[10px] text-slate-400 uppercase font-semibold block">
                                         Batch Size
@@ -124,7 +133,10 @@ export default function CourseHeroDetail({ course }: CourseHeroDetailProps) {
                                 href="#curriculum"
                                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold px-5 py-3.5 rounded-xl text-sm border border-white/20 transition-colors"
                             >
-                                <Download size={16} className="text-slate-300" />
+                                <Download
+                                    size={16}
+                                    className="text-slate-300"
+                                />
                                 <span>View Syllabus</span>
                             </a>
                         </div>
@@ -134,14 +146,16 @@ export default function CourseHeroDetail({ course }: CourseHeroDetailProps) {
                     <div className="lg:col-span-5">
                         <div className="relative aspect-4/3 rounded-2xl overflow-hidden border-2 border-white/15 shadow-2xl bg-slate-900 group">
                             <Image
-                                src={course.image || "/images/chefsinkitchen.png"}
+                                src={
+                                    course.image || "/images/chefsinkitchen.png"
+                                }
                                 alt={course.title}
                                 fill
                                 priority
                                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                                 sizes="(max-width: 1024px) 100vw, 40vw"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
 
                             <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                                 <span className="inline-flex items-center gap-2 bg-black/60 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-white/20">
